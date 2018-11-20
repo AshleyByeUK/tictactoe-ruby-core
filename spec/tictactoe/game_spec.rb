@@ -1,8 +1,8 @@
-require 'game/game'
-require 'game/mock_player'
-require 'console_client/mock_game_ui'
+require 'tictactoe/game'
+require 'tictactoe/mock_player'
+require 'tictactoe/mock_game_ui'
 
-module Game
+module TicTacToe
   describe Game do
     it "has a ready state and current player when initialised" do
       mock_player = MockPlayer.new('X')
@@ -28,7 +28,7 @@ module Game
       player_one = MockPlayer.new('X', [1])
       player_two = MockPlayer.new('O')
       game = Game.new([player_one, player_two])
-      updated_game = game.make_move(ConsoleClient::MockGameUI.new)
+      updated_game = game.make_move(MockGameUI.new)
       expect(updated_game.object_id).not_to eq game.object_id
       expect(updated_game.state).to eq :playing
       expect(updated_game.current_board).to eq Board.new(3, ['X', *2..9])
@@ -36,7 +36,7 @@ module Game
     end
 
     it "does not allow tokens to be placed on top of other tokens" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', [1])
       player_two = MockPlayer.new('O', [1])
       game = Game.new([player_one, player_two])
@@ -52,7 +52,7 @@ module Game
         player_one = MockPlayer.new('X', [position])
         player_two = MockPlayer.new('O')
         game = Game.new([player_one, player_two])
-        expect { game.make_move(ConsoleClient::MockGameUI.new) }.to raise_error(InvalidPositionError, "invalid position")
+        expect { game.make_move(MockGameUI.new) }.to raise_error(InvalidPositionError, "invalid position")
         expect(game.state).to eq :ready
       end
     end
@@ -61,12 +61,12 @@ module Game
       player_one = MockPlayer.new('X', [1])
       player_two = MockPlayer.new('O')
       game = Game.new([player_one, player_two])
-          .make_move(ConsoleClient::MockGameUI.new)
+          .make_move(MockGameUI.new)
       expect(game.current_player).to be 2
     end
 
     it "after player one and two make a move player one is the current player" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', [1])
       player_two = MockPlayer.new('O', [2])
       game = Game.new([player_one, player_two])
@@ -76,7 +76,7 @@ module Game
     end
 
     it "correctly places player twos token on the board" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', [1])
       player_two = MockPlayer.new('O', [2])
       game = Game.new([player_one, player_two])
@@ -87,7 +87,7 @@ module Game
     end
 
     it "is still a player's turn after bad move" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', ["BAD"])
       player_two = MockPlayer.new('O')
       game = Game.new([player_one, player_two])
@@ -96,7 +96,7 @@ module Game
     end
 
     it "returns the status and result of a tied game" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', [1, 3, 4, 9, 8])
       player_two = MockPlayer.new('O', [2, 5, 7, 6])
       game = Game.new([player_one, player_two])
@@ -115,7 +115,7 @@ module Game
     end
 
     it "returns the status and result of a won game" do
-      game_ui = ConsoleClient::MockGameUI.new
+      game_ui = MockGameUI.new
       player_one = MockPlayer.new('X', [1, 2, 3])
       player_two = MockPlayer.new('O', [4, 5])
       game = Game.new([player_one, player_two])

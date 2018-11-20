@@ -1,4 +1,4 @@
-module Game
+module TicTacToe
   class Board
     attr_reader :positions, :size
 

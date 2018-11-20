@@ -1,8 +1,8 @@
-require 'game/easy_player'
-require 'game/board'
-require 'game/game'
+require 'tictactoe/easy_player'
+require 'tictactoe/board'
+require 'tictactoe/game'
 
-module Game
+module TicTacToe
   describe EasyPlayer do
     it "picks a random position from available positions" do
       board = Board.new(3, ['X', 'O', 'X', *3..8])

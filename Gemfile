@@ -8,8 +8,3 @@ group :test do
   gem 'codecov', require: false
   gem 'rack-test', require: false
 end
-
-gem 'puma'
-gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'sinatra-cors', '1.1.0'

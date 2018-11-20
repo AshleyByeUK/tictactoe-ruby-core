@@ -1,11 +1,11 @@
-require 'console_client/mock_game_ui'
-require 'game/game_engine'
-require 'game/mock_player'
+require 'tictactoe/mock_game_ui'
+require 'tictactoe/game_engine'
+require 'tictactoe/mock_player'
 
-module Game
+module TicTacToe
   describe GameEngine do
     before(:each) do
-      @ui = ConsoleClient::MockGameUI.new
+      @ui = MockGameUI.new
       @engine = GameEngine.new(@ui)
     end
 

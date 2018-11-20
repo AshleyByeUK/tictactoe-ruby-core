@@ -1,6 +1,6 @@
-require 'game/board'
+require 'tictactoe/board'
 
-module Game
+module TicTacToe
   describe Board do
     context "a 3x3 board" do
       before(:each) do

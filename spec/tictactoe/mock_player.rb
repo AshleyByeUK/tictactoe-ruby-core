@@ -1,4 +1,4 @@
-module Game
+module TicTacToe
   class MockPlayer
     attr_reader :token
 

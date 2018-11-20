@@ -1,7 +1,7 @@
-require 'game/board'
-require 'game/game_rules'
+require 'tictactoe/board'
+require 'tictactoe/game_rules'
 
-module Game
+module TicTacToe
   describe GameRules do
     before(:each) do
       @rules = GameRules.new(Board.new)

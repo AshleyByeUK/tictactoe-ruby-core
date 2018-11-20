@@ -1,8 +1,8 @@
-require 'game/easy_player'
-require 'game/hard_player'
-require 'game/human_player'
+require 'tictactoe/easy_player'
+require 'tictactoe/hard_player'
+require 'tictactoe/human_player'
 
-module Game
+module TicTacToe
   class Player
     def self.create(type, token, name)
       case type

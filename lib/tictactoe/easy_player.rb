@@ -1,15 +1,15 @@
-module Game
-  class HumanPlayer
+module TicTacToe
+  class EasyPlayer
     attr_reader :name, :token, :type
 
     def initialize(token, name)
       @token = token
       @name = name
-      @type = :human
+      @type = :easy
     end
 
-    def get_move(game, ui)
-      ui.get_move(game).to_i
+    def get_move(game, ui = nil)
+      game.available_positions.sample
     end
   end
 end

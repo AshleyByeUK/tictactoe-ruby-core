@@ -1,4 +1,4 @@
-module Game
+module TicTacToe
   class HardPlayer
     attr_reader :name, :token, :type
 

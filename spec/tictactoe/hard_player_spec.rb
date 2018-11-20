@@ -1,8 +1,8 @@
-require 'game/board'
-require 'game/game'
-require 'game/hard_player'
+require 'tictactoe/board'
+require 'tictactoe/game'
+require 'tictactoe/hard_player'
 
-module Game
+module TicTacToe
   describe HardPlayer do
     1.times do
       before(:each) do

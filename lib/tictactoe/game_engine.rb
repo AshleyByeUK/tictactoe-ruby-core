@@ -1,6 +1,6 @@
-require 'game/errors'
+require 'tictactoe/errors'
 
-module Game
+module TicTacToe
   class GameEngine
     def initialize(ui, board_size = 3)
       @ui = ui

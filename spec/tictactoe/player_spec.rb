@@ -1,6 +1,6 @@
-require 'game/player'
+require 'tictactoe/player'
 
-module Game
+module TicTacToe
   describe Player do
     before(:each) do
       @token = 'X'

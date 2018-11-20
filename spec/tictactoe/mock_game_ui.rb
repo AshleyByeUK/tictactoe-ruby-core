@@ -1,4 +1,4 @@
-module ConsoleClient
+module TicTacToe
   class MockGameUI
     attr_reader :show_game_state_called, :get_move_called,
       :show_invalid_position_message_called, :show_game_result_called

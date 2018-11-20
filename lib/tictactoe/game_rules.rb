@@ -1,4 +1,4 @@
-module Game
+module TicTacToe
   class GameRules
     def initialize(board)
       @winning_indices = board.compute_winning_indices

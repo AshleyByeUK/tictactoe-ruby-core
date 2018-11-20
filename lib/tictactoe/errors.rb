@@ -1,4 +1,4 @@
-module Game
+module TicTacToe
   class InvalidPositionError < RuntimeError
     def initialize
       super("invalid position")
