@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/AshleyByeUK/tictactoe-ruby-core.svg?branch=master)](https://travis-ci.org/AshleyByeUK/tictactoe-ruby-core)
 [![codecov](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby-core/branch/master/graph/badge.svg)](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby-core)
 
-# TicTacToe (Ruby Edtion)
+# tictactoe-ruby-core
 
 The venerable game of TicTacToe, written in Ruby, otherwise known as noughts and crosses. Game player types
 include Human, Easy Computer and Hard Computer. Games can be played on either a 3x3 or a 4x4 board.
