@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/AshleyByeUK/tictactoe-ruby.svg?branch=master)](https://travis-ci.org/AshleyByeUK/tictactoe-ruby)
-[![codecov](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby/branch/master/graph/badge.svg)](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby)
+[![Build Status](https://travis-ci.org/AshleyByeUK/tictactoe-ruby-core.svg?branch=master)](https://travis-ci.org/AshleyByeUK/tictactoe-ruby-core)
+[![codecov](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby-core/branch/master/graph/badge.svg)](https://codecov.io/gh/AshleyByeUK/tictactoe-ruby-core)
 
 # TicTacToe (Ruby Edtion)
 
@@ -16,26 +16,19 @@ has only been carried out on macOS.
 To download the source, clone the repository:
 
 ```
-git clone git@github.com:AshleyByeUK/tictactoe-ruby.git
-cd tictactoe-ruby
+git clone git@github.com:AshleyByeUK/tictactoe-ruby-core.git
+cd tictactoe-ruby-core
 ```
 
-All of the following commands assume the current working directory is `tictactoe-ruby`.
+All of the following commands assume the current working directory is `tictactoe-ruby-core`.
 
-## Playing
+## Installing
 
-Run the game (executable from anywhere - add the `bin` directory to your `PATH` if you want):
-
-```
-bin/tictactoe
-```
-
-## JSON API
-
-To run the JSON API, execute:
+Build and install the gem:
 
 ```
-bundle exec rackup
+gem build tictactoe-ruby-core.gemspec
+gem install tictactoe-ruby-core-0.1.0.gem
 ```
 
 ## Testing
@@ -43,14 +36,12 @@ bundle exec rackup
 Running the tests:
 
 ```
-bundle install
 bundle exec rspec
 ```
 
 Or:
 
 ```
-bundle install
 bundle exec rspec --format doc
 ```
 
