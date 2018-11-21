@@ -2,7 +2,7 @@ require 'tictactoe/board'
 require 'tictactoe/game_rules'
 
 module TicTacToe
-  describe GameRules do
+  RSpec.describe GameRules do
     before(:each) do
       @rules = GameRules.new(Board.new)
     end

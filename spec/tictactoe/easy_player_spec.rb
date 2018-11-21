@@ -3,7 +3,7 @@ require 'tictactoe/board'
 require 'tictactoe/game'
 
 module TicTacToe
-  describe EasyPlayer do
+  RSpec.describe EasyPlayer do
     it "picks a random position from available positions" do
       board = Board.new(3, ['X', 'O', 'X', *3..8])
       game = Game.new(board)

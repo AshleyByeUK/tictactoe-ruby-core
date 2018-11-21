@@ -1,7 +1,7 @@
 require 'tictactoe/board'
 
 module TicTacToe
-  describe Board do
+  RSpec.describe Board do
     context "a 3x3 board" do
       before(:each) do
         @board = Board.new

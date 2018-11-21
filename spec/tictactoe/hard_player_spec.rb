@@ -3,7 +3,7 @@ require 'tictactoe/game'
 require 'tictactoe/hard_player'
 
 module TicTacToe
-  describe HardPlayer do
+  RSpec.describe HardPlayer do
     1.times do
       before(:each) do
         player_one = HardPlayer.new('X', 'Player 1')

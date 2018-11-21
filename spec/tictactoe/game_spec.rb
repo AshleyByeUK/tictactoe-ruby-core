@@ -3,7 +3,7 @@ require 'tictactoe/mock_player'
 require 'tictactoe/mock_game_ui'
 
 module TicTacToe
-  describe Game do
+  RSpec.describe Game do
     it "has a ready state and current player when initialised" do
       mock_player = MockPlayer.new('X')
       game = Game.new([mock_player, mock_player])

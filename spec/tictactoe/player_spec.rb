@@ -1,7 +1,7 @@
 require 'tictactoe/player'
 
 module TicTacToe
-  describe Player do
+  RSpec.describe Player do
     before(:each) do
       @token = 'X'
       @name = 'Player'

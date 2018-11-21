@@ -3,7 +3,7 @@ require 'tictactoe/game_engine'
 require 'tictactoe/mock_player'
 
 module TicTacToe
-  describe GameEngine do
+  RSpec.describe GameEngine do
     before(:each) do
       @ui = MockGameUI.new
       @engine = GameEngine.new(@ui)
